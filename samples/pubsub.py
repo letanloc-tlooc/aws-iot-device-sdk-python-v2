@@ -86,7 +86,7 @@ if __name__ == '__main__':
         port=cmdData.input_port,
 
         cert_filepath="/home/ltl/Downloads/connect_device_package/aws/b928420dbc796f7600f04b5a77f61083686b3a37943b64ad0696992c891a9b2f-certificate.pem.crt",
-        pri_key_filepath="/home/ltl/Downloads/connect_device_package/aws/b928420dbc796f7600f04b5a77f61083686b3a37943b64ad0696992c891a9b2f-private.pem.key"
+        pri_key_filepath="/home/ltl/Downloads/connect_device_package/aws/b928420dbc796f7600f04b5a77f61083686b3a37943b64ad0696992c891a9b2f-private.pem.key",
         ca_filepath="/home/ltl/Downloads/connect_device_package/aws/AmazonRootCA1.pem",
 
         on_connection_interrupted=on_connection_interrupted,
