@@ -82,16 +82,14 @@ if __name__ == '__main__':
 
     # Create a MQTT connection from the command line data
     mqtt_connection = mqtt_connection_builder.mtls_from_path(
-        endpoint= "axzwie8t18qsa-ats.iot.ap-southeast-1.amazonaws.com",
+        endpoint=cmdData.input_endpoint,
         port=cmdData.input_port,
-        
-        cert_filepath="/home/ltl/Downloads/connect_device_package/aws/b928420dbc796f7600f04b5a77f61083686b3a37943b64ad0696992c891a9b2f-certificate.pem.crt",
-        pri_key_filepath="/home/ltl/Downloads/connect_device_package/aws/b928420dbc796f7600f04b5a77f61083686b3a37943b64ad0696992c891a9b2f-private.pem.key",
-        ca_filepath="/home/ltl/Downloads/connect_device_package/aws/AmazonRootCA1.pem",
-
+        cert_filepath=cmdData.input_cert,
+        pri_key_filepath=cmdData.input_key,
+        ca_filepath=cmdData.input_ca,
         on_connection_interrupted=on_connection_interrupted,
         on_connection_resumed=on_connection_resumed,
-        client_id='010438468757',
+        client_id=cmdData.input_clientId,
         clean_session=False,
         keep_alive_secs=30,
         http_proxy_options=proxy_options,
